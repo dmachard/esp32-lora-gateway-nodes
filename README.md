@@ -4,7 +4,7 @@ An end-to-end telemetry system featuring an **ESP32 Web Gateway** and multiple *
 
 Based on ESP32-C6, ESP32-S3 and using LoRa SX1262 and SX1278 transceivers.
 
-## 📁 Architecture
+## Architecture
 
 ### 1. Gateway
 Acts as the central receiver and metrics exporter.
@@ -65,7 +65,7 @@ Telemetry node reading from a DHT22 sensor, transmitting encrypted packets using
 
 ---
 
-## 📊 Available Prometheus Metrics
+## Available Prometheus Metrics
 The gateway exports the following metrics on port `8080` at `/metrics` (all labeled by `{node="<ID>"}`):
 *   `lora_rssi_dbm` - Last packet Signal Strength Indication (dBm)
 *   `lora_snr_db` - Last packet Signal-to-Noise Ratio (dB)
@@ -80,7 +80,7 @@ The gateway exports the following metrics on port `8080` at `/metrics` (all labe
 
 ---
 
-## 📡 LoRa Configuration
+## LoRa Configuration
 
 All devices share the following radio parameters:
 *   **Frequency:** `433.0 MHz`
@@ -93,7 +93,7 @@ All devices share the following radio parameters:
 
 ---
 
-## 🔒 Security & Packet Format (AES-128 GCM)
+## Security & Packet Format (AES-128 GCM)
 
 Data payload authentication and confidentiality are secured via **AES-128 GCM**.
 
